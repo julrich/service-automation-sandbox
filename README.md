@@ -1,8 +1,14 @@
 # service-automation-sandbox
 
-Throwaway TypeScript fixture for verifying the `service-automation` orchestrator end to end: a
-single dependency-free greeting module (`src/greeting.ts`), a barrel (`src/index.ts`) and a tiny
-assertion helper (`src/greeting.test-helper.ts`), checked with `pnpm run typecheck`. Issues #1,
-#2 and #3 are deliberately small and are meant to be run as a batch: #1 is a one-word case bug in
-the casual greeting, while #2 and #3 both touch `src/greeting.ts`, so their branches conflict on
-rebase and the orchestrator's conflict resolution is exercised for real.
+Throwaway fixture repo used to verify the local issue-automation pipeline. It is a
+single TypeScript package with a `typecheck` script, deliberately small so a full
+`triage -> run` cycle stays quick.
+
+The three open issues are real, unsatisfied requests against `main`:
+
+- #1 — the casual greeting is lower-cased (`GREETING_PREFIX = "hello"`).
+- #2 — add a formal greeting variant (`GreetingStyle` only knows `"casual"` today).
+- #3 — add a greeting test helper plus the `GREETING_STYLES` export it needs.
+
+Issues #2 and #3 both edit `src/greeting.ts`, which is what makes a batch of the two
+exercise the conflict path.

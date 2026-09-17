@@ -1,12 +1,13 @@
-export type GreetingStyle = "casual" | "formal";
+export type GreetingStyle = "casual";
 
-/** Leading word of a casual greeting. */
+/** Leading word of the greeting. */
 export const GREETING_PREFIX = "hello";
 
+/**
+ * Build the greeting for `name`.
+ *
+ * `style` is reserved for additional greeting variants; only `"casual"` exists today.
+ */
 export function greet(name: string, style: GreetingStyle = "casual"): string {
-  if (style === "formal") {
-    return "Good day, " + name + ".";
-  }
-
-  return GREETING_PREFIX + ", " + name + "!";
+  return `${GREETING_PREFIX}, ${name}!`;
 }
