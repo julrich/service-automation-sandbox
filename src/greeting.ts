@@ -1,7 +1,10 @@
 export type GreetingStyle = "casual";
 
 /** Leading word of the greeting. */
-export const GREETING_PREFIX = "hello";
+export const GREETING_PREFIX = "Hello";
+
+/** Greeting styles supported by {@link greet}. */
+export const GREETING_STYLES: GreetingStyle[] = ["casual"];
 
 /**
  * Build the greeting for `name`.
