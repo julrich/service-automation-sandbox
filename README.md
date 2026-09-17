@@ -4,9 +4,8 @@ Throwaway fixture repo used to verify the local issue-automation pipeline. It is
 single TypeScript package with a `typecheck` script, deliberately small so a full
 `triage -> run` cycle stays quick.
 
-The three open issues are real, unsatisfied requests against `main`:
+The open issues are real, unsatisfied requests against `main`:
 
-- #1 — the casual greeting is lower-cased (`GREETING_PREFIX = "hello"`).
 - #2 — add a formal greeting variant (`GreetingStyle` only knows `"casual"` today).
 - #3 — add a greeting test helper plus the `GREETING_STYLES` export it needs.
 

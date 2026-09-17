@@ -1,7 +1,7 @@
 export type GreetingStyle = "casual";
 
 /** Leading word of the greeting. */
-export const GREETING_PREFIX = "hello";
+export const GREETING_PREFIX = "Hello";
 
 /**
  * Build the greeting for `name`.
