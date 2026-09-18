@@ -20,3 +20,8 @@ export const GREETING_TERMINATOR = "!";
 export function greet(name: string, style: GreetingStyle = "casual"): string {
   return `${GREETING_PREFIX}${GREETING_DELIMITER}${name}${GREETING_TERMINATOR}`;
 }
+
+/** Append `suffix` to an already-built `greeting`, e.g. `"?"` or `"..."`. */
+export function withSuffix(greeting: string, suffix: string): string {
+  return `${greeting}${suffix}`;
+}
